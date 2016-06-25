@@ -1,0 +1,42 @@
+body{
+	text-align:center;
+	width:100%;
+}
+
+h2{
+	font-family:arial;
+}
+
+form{
+	display:inline-block;
+}
+
+#addbutton{
+	display:inline-block;
+	height:20px;
+	width:70px;
+	background-color:#cc0000;
+	font-family:arial;
+	color:#ffffff;
+	border-radius:5px;
+	text-align:center;
+	margin:2px;
+}
+
+.list{
+	width:100%;
+	text-align:center;
+}
+
+.todoList{
+	background-color:#512DA8;
+	color:#ffffff;
+	width:25%;
+	length:100px;
+	padding:5px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+	postion:relative;
+	
+}
