@@ -1,1 +1,1 @@
-# Snake game using JavaScript and Jquery
+# Snake game using JavaScript and HTML

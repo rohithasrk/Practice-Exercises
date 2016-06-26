@@ -52,4 +52,38 @@ var drawModule=(function(){
 			}
 		}
 	}
+	
+	var checkCollision=function(x,y,array){
+		for(var i=0;i<array.length;i++){
+			if(array[i].x===x && array[i].y===y) return true;
+		}
+		return false;
+	}
+	
+	var paint=function(){
+		context.fillStyle='lightgrey';
+		context.fillRect(0,0,w,h);
+		
+		context.strokeStyle='black';
+		context.strokeRect(0,0,w,h);
+		
+		//disable start button
+		
+		var snakeX=snake[0].x;
+		var snakeY=snake[0].y;
+		
+		if(direction=='right'){
+			snakeX++;
+		}
+		if(direction=='left'){
+			snakeX--;
+		}
+		if(direction=='up'){
+			snakeY--;
+		}
+		if(direction=='down'){
+			snakeY++;
+		}
+		
+	}
 })
