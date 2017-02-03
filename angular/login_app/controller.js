@@ -15,10 +15,13 @@ app.config(function($routeProvider){
 
 app.controller('loginCtrl', function($scope, $location){
     $scope.submit = function(){
-        var uname = $scope.uname;
-        var password = $scope.password;
-        if(uname == 'admin' && password == 'admin'){
+        var uname = $scope.username;
+        var pass = $scope.password;
+        if(uname == "admin" && pass == "admin"){
             $location.path('/dashboard');
         }
+        else{
+            console.log('Invalid credentials');
+        }
     }
-})
+});
