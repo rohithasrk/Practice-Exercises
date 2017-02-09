@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular JS | Basic Login form</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    <body ng-app="mainApp">
+        <div ng-controller="people">
+            <ul>
+                <h2>Name and ages of programmers: </h2>
+                <li ng-repeat="person in persons">
+                    {{ person.Name + ':' + person.Age }}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
