@@ -1,7 +1,7 @@
 var appX = angular.module('todoApp', [])
 
 appX.controller('app', function($scope){
-    $scope.tasks = []
+    $scope.tasks = [];
     $scope.searchEnter = function(){
         if(event.which == 13 && $scope.task != ''){
             $scope.addTask();
@@ -9,8 +9,12 @@ appX.controller('app', function($scope){
     };
         
     $scope.addTask = function(){
-        $scope.tasks.push($scope.task);
+        $scope.tasks.push({'taskMessage':$scope.task, 'status':false});
         console.log($scope.tasks);
         $scope.task = '';
+    };
+    
+    $scope.contentEdit = function(){  
+        event.target.contentEditable = event.target.contentEditable == "false" ? "true" : "false";
     };
 });
