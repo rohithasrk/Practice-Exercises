@@ -23,7 +23,7 @@
         <div id="tasksToShow">
             <ul>
                 <li ng-repeat="task in tasks">
-                    <span contentEditable="false"  ng-dblclick="contentEdit()" ng-model="task.taskMessage" class="done-{{task.status}}">
+                    <span contentEditable="false" ng-keydown="enterAgain(task.taskMessage)" ng-dblclick="contentEdit()" ng-model="task.taskMessage" class="done-{{task.status}}">
                         <input type="checkbox" ng-model="task.status">{{ task.taskMessage }}
                     </span>
                 </li>

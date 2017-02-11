@@ -17,4 +17,10 @@ appX.controller('app', function($scope){
     $scope.contentEdit = function(){  
         event.target.contentEditable = event.target.contentEditable == "false" ? "true" : "false";
     };
+    
+    $scope.enterAgain = function(msg){
+        if(event.which == 13 && msg != ''){
+            $scope.contentEdit();
+        }
+    };
 });
